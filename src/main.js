@@ -28,3 +28,4 @@ var info = {
 		ISO_3166_a3: Scratch.two2three[Scratch.countries[data.profile.country]] // Scratcher's country code (ISO 3166-1 a3)
 	}
 };
+
