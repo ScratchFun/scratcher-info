@@ -6,5 +6,8 @@ var http = {
 };
 
 var info = {
-	messages: http.get('https://api.scratch.mit.edu/users/csf30816/messages/count'),
+	id: JSON.parse(http.get('https://api.scratch.mit.edu/users/' + scratcher)).id,
+	joined: JSON.parse(http.get('https://api.scratch.mit.edu/users/' + scratcher)).history.joined,
+	messages: JSON.parse(http.get('https://api.scratch.mit.edu/users/' + scratcher + '/messages/count')).count,
+	avatars: JSON.parse(http.get('https://api.scratch.mit.edu/users/' + scratcher)).profile.images,
 };
