@@ -48,7 +48,7 @@ var info = {
 		pages: Math.ceil(parseInt(fp.substring(fp.search('Followers '), fp.search('Followers ')+20).replace('Followers (', '').replace(')', ''))/60),
 	},
 	following_data: {
-		num: parseInt(fi.substring(fi.search('Followers '), fi.search('Followers ')+20).replace('Followers (', '').replace(')', '')),
+		num: parseInt(fi.substring(fi.search('Following '), fi.search('Following ')+20).replace('Following (', '').replace(')', '')),
 		pages: Math.ceil(parseInt(fi.substring(fi.search('Following '), fi.search('Following ')+20).replace('Following (', '').replace(')', ''))/60)
 	},
 };
