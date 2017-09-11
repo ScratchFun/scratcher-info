@@ -43,6 +43,6 @@ var info = {
 		ISO_3166_a3: Scratch.two2three[Scratch.countries[data.profile.country]] // Scratcher's country code (ISO 3166-1 a3)
 	},
 	follower_data: {
-		num: parseInt(fp.substring(fp.search('Followers'), fp.search('Followers')+20).replace('Followers', '')),
+		num: parseInt(fp.substring(fp.search('Followers '), fp.search('Followers ')+20).replace('Followers (', '').replace(')', '')),
 	},
 };
