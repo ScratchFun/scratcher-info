@@ -44,5 +44,6 @@ var info = {
 	},
 	follower_data: {
 		num: parseInt(fp.substring(fp.search('Followers '), fp.search('Followers ')+20).replace('Followers (', '').replace(')', '')),
+		pages: Math.ceil(parseInt(fp.substring(fp.search('Followers '), fp.search('Followers ')+20).replace('Followers (', '').replace(')', ''))/60),
 	},
 };
