@@ -33,7 +33,7 @@ var info = {
 		seconds_ago: Scratch.timeago(data.history.joined, 'seconds'),
 		millis_ago: Scratch.timeago(data.history.joined, 'milliseconds'),
 	},
-	messages: JSON.parse(http.get('https://api.scratch.mit.edu/users/' + scratcher + '/messages/count')).count, // Scratcher's message count
+	messages: JSON.parse(http.get('https://api.scratch.mit.edu/proxy/users/' + scratcher + '/activity/count')).msg_count, // Scratcher's message count
 	avatars: data.profile.images, // Scratcher's avatar's
 	about_me: data.profile.bio, // Scratcher's "About me"
 	working_on: data.profile.status, // Scratcher's "What I am working on"
