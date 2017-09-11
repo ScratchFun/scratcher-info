@@ -9,6 +9,7 @@ var http = {
 
 // Scratcher's basic info
 var data = JSON.parse(http.get('https://api.scratch.mit.edu/users/' + scratcher));
+var fp = http.get('https://scratch.mit.edu/users/' + scratcher + '/followers');
 
 Scratch = {};
 // List of ISO 3166-1 a2 countries and their codes
@@ -40,5 +41,8 @@ var info = {
 	country_code: {
 		ISO_3166_a2: Scratch.countries[data.profile.country], // Scratcher's country code (ISO 3166-1 a2)
 		ISO_3166_a3: Scratch.two2three[Scratch.countries[data.profile.country]] // Scratcher's country code (ISO 3166-1 a3)
+	},
+	follower_data: {
+		num: parseInt(fp.substring(fp.search('Followers'), fp.search('Followers')+20).replace('Followers', '')),
 	},
 };
