@@ -9,9 +9,9 @@ var getInfo = function(scratcher) {
 	};
 
 	// Scratcher's basic info
-	var data = JSON.parse(http.get('https://api.scratch.mit.edu/users/' + scratcher));
-	var fp = http.get('https://scratch.mit.edu/users/' + scratcher + '/followers');
-	var fi = http.get('https://scratch.mit.edu/users/' + scratcher + '/following');
+	var data = JSON.parse(http.get('https://cors-everywhere.herokuapp.com/api.scratch.mit.edu/users/' + scratcher));
+	var fp = http.get('https://cors-everywhere.herokuapp.com/scratch.mit.edu/users/' + scratcher + '/followers');
+	var fi = http.get('https://cors-everywhere.herokuapp.com/scratch.mit.edu/users/' + scratcher + '/following');
 
 	Scratch = {};
 	// List of ISO 3166-1 a2 countries and their codes
