@@ -57,3 +57,4 @@ var getInfo = function(scratcher) {
 	};
 	return info;
 };
+
